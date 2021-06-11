@@ -1,0 +1,66 @@
+.card-product-detail{
+    box-shadow: 0px 0px 20px 1px silver;
+    border-radius: 10px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+
+    width: 70%;
+
+    display: flex;
+    flex-direction: row;
+
+    padding: 10px;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+
+    width: 100%;
+}
+
+.btn-buy{
+    width: 30%;
+    margin-left: auto;
+    margin-right: 50px;
+
+    border: 1px solid #303030;
+    border-radius: 5px;
+
+    height: 40px;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    background-color: transparent;
+}
+
+.btn-buy:hover{
+    background-color: #303030;
+    color: #FFF;
+    transition: 0.2s;
+}
+
+.slug-image{
+    width: 40%;
+}
+
+.description{
+    margin-top: -20px;
+    margin-right: 50px;
+
+    color: grey;
+}
+
+h1{
+    color: #505050;
+}
+
+h2{
+    color: #505050;
+}

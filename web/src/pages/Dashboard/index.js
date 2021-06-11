@@ -8,25 +8,14 @@ import "./index.css";
 
 export default function Dashboard() {
     const [products, setProducts] = useState([]);
-    const [search, setSearch] = useState('');
     
     useEffect(() => {
         async function findAllProducts(){
             const response = await api.get('/products');
-            setProducts(response.data);          
+            setProducts(response.data);   
         }
         findAllProducts();
     }, []);
-
-//    useEffect(() => {
-//         async function handleSearch() {
-//             const response = await api.get('/products', {
-//                 params: {
-
-//                 }
-//             });
-//         }
-//    });
 
     return(
         <div className="container-dashboard">
@@ -48,13 +37,12 @@ export default function Dashboard() {
                     <Icon.FiUser />
                 </div> 
             </div>
-
-            
+ 
             <div>
                 <section className="container grid grid-template-columns-3">
                     {products.map(product => (
                         <div className="items-product-card" key={product.id}>
-                            <Link to={`/details/${product.slug}`}>
+                            <Link to={`/${product.slug}`}>
                                 <img className="images-dashboard" src={`https://ecommerce-elaine.herokuapp.com${product.image.url}`} alt={product.image.url}/>
                                 <h3>{product.title}</h3>
                                 <h5>U$ {product.price}</h5>
@@ -63,8 +51,6 @@ export default function Dashboard() {
                     ))}
                 </section>
             </div>
-            
-
         </div>  
     );
 }
